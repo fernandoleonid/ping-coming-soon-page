@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 64px;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    margin-bottom: 32px;
+}
+
+h2{
+    font-size: 48px;
+    color: #888;
+    font-weight: 300;
+}
+h2 span {
+    color: #000;
+    font-weight: 700;
+}
+
+main p {
+    color: hsl(0, 0%, 59%);
+}
+
+form {
+    display: flex;
+    gap: 12px;
+}
+
+form .input-container{
+    display: flex;
+    flex-direction: column;
+}
+.error {
+    padding-left: 16px;
+    color: hsl(354, 100%, 66%);
+    font-size: 12px;
+    opacity: 0;
+    transition: .5s;
+}
+
+form input:invalid:not(:placeholder-shown) ~ .error{
+    opacity: 1;
+}
+
+form input {
+    width: 500px;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 16px;
+    border: 1px solid hsl(0, 0%, 59%);
+    outline: none;
+}
+
+form input::-webkit-input-placeholder{
+    color: hsl(0, 0%, 59%);
+}
+form button {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: hsl(223, 87%, 63%);
+    border:none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dashboard{
+    width: 66%;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+}
+.social-media{
+    display: flex;
+    gap: 16px;
+}
+
+.social-media i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid hsl(223, 100%, 88%);
+    display: grid;
+    place-content: center;
+    color: hsl(223, 87%, 63%);
+}
+
+footer  p {
+    color:  hsl(0, 0%, 59%);
+}
+
+@media (max-width: 480px) {
+    body{
+        padding: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    form input{
+        width: 100%;
+    }
+    form button{
+        width: 100%;
+    }
+    .dashboard{
+        width: 100%;
+    }
+
+    footer{
+        padding-top: 32px;
+    }
+}
